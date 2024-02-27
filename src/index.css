@@ -1,0 +1,466 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
+}
+
+a {
+	text-decoration: none;
+}
+
+#app {
+	width: 100vw;
+	height: fit-content;
+	min-height: 100vh;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px;
+	overflow-x: hidden;
+	transition: all 0.4s ease-in-out;
+}
+
+main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 4rem;
+	height: 100%;
+}
+
+#profile {
+	display: flex;
+	padding: 2rem 1rem;
+	flex-direction: column;
+	align-items: center;
+	color: #fff;
+	background: #211e5c;
+	border-radius: 2vw;
+	border-bottom: 8px solid #f7e018;
+
+	width: 25vw;
+	position: relative;
+	box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+}
+
+#profile .tag {
+	position: absolute;
+	top: 1vw;
+	left: 1vw;
+	color: #211e5c;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 0.2rem;
+	rotate: -155deg;
+}
+
+#profile .tag span {
+	font-size: 1.2rem;
+	font-weight: 900;
+	color: #211e5c;
+	background: #f7e018;
+	border-radius: 50%;
+	width: 25px;
+	height: 25px;
+	text-align: center;
+	margin: auto;
+
+	rotate: 155deg;
+}
+
+#profile .tag::before,
+#profile .tag::after {
+	width: 10px;
+	height: 10px;
+	background: #f7e018;
+	border-radius: 50%;
+	content: '';
+}
+
+#profile h1 {
+	font-size: 1.5rem;
+}
+
+#profile h2 {
+	font-size: 1rem;
+	color: #f7e018cc;
+}
+
+#profile p {
+	font-size: 0.8rem;
+	text-align: center;
+	margin: 1rem;
+}
+
+#profile p span {
+	color: #f7e018;
+}
+
+div.avatar {
+	width: 10vw;
+	height: 10vw;
+	border-radius: 50%;
+
+	padding: 6px;
+	margin: 1rem;
+	border-left: 6px solid #211e5c;
+	border-top: 6px solid #f7e018;
+	border-right: 6px solid #f7e018;
+	border-bottom: 6px solid #f7e018;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	order: -1;
+}
+
+.avatar > img {
+	width: 100%;
+	border-radius: 50%;
+	border: 2px solid #56423b;
+}
+
+.email {
+	background: #6b61bb;
+	color: #fff;
+	padding: 0.4rem 0.5rem;
+	border-radius: 8px;
+	border: 2px solid #6b61bb;
+	font-size: 0.8rem;
+	transition: all 0.3s ease-in-out;
+}
+
+.email:hover {
+	scale: 1.05;
+	background: #211e5c;
+	border: 2px solid #6b61bb;
+}
+
+#socials {
+	margin-top: 1rem;
+	display: flex;
+	gap: 1rem;
+	color: #a89be1;
+	font-size: 1.5rem;
+}
+
+#socials a {
+	padding: 0.2rem;
+	transition: all 0.5s ease-in-out;
+}
+
+#socials a:hover {
+	scale: 1.2;
+}
+
+#socials a svg {
+	width: 25px;
+	height: 25px;
+	color: #6b61bb;
+}
+
+#task {
+	margin-bottom: auto;
+	transition: all 0.4s ease-in-out;
+	max-width: 400px;
+}
+
+#task h2 {
+	text-align: center;
+	color: #211e5c;
+	transition: all 0.4s ease-in-out;
+}
+
+#task .sub-title {
+	text-align: center;
+}
+
+#task h3 {
+	color: #6b61bb;
+	margin: 0.5rem 0;
+	transition: all 0.4s ease-in-out;
+}
+
+#task .section {
+	margin: 1.5rem 0;
+}
+
+#task ul {
+	padding: auto;
+	position: relative;
+}
+
+#task ul li {
+	padding: auto;
+	margin: 5px 0;
+	box-sizing: inherit;
+	display: flex;
+	justify-content: space-between;
+	gap: 1rem;
+}
+
+#task ul li {
+	list-style: none;
+	padding: 2px 10px;
+	width: 100%;
+	transition: transform 0.5s;
+}
+
+#task ul li span {
+	width: 20px;
+	height: 20px;
+	text-align: center;
+	line-height: 20px;
+	background: #211e5c;
+	color: #f7e018;
+	display: inline-block;
+	border-radius: 50%;
+	margin-right: 10px;
+	font-size: 12px;
+	font-weight: 600;
+	transform: translateY(-2px);
+	transition: all 0.4s ease-in-out;
+}
+
+#task ul li .outcome {
+	width: fit-content;
+	display: flex;
+	align-items: flex-start;
+}
+
+#task ul li .outcome input {
+	padding: 0.2rem 0.5rem;
+	border-radius: 5px;
+
+	color: #211e5c;
+	border: 1px solid #6b61bb;
+}
+
+#task ul li .outcome input:focus {
+	outline: none;
+	border: 2px solid #211e5c;
+	background: #a89be155;
+}
+
+#task ul li .actions {
+	display: flex;
+	gap: 0.5rem;
+	opacity: 0.2;
+}
+
+#task ul li:hover .actions {
+	opacity: 1;
+}
+
+#task ul li .edit {
+	color: #211e5c;
+	border: 1px solid #6b61bb;
+	background: #a89be155;
+}
+
+#task ul li .delete {
+	color: #fff;
+	border: 1px solid #8b0000;
+	background: #8b0000;
+}
+
+#task ul li .delete:focus,
+#task ul li .delete:hover {
+	border: 1px solid #8b000077;
+	background: #8b000077;
+}
+
+#task button {
+	padding: 0.1rem 0.3rem;
+	border-radius: 4px;
+}
+
+#mode {
+	position: fixed;
+	top: 10px;
+	right: 10px;
+	padding: 0.3rem 0.5rem;
+	border: 2px solid #211e5c;
+	color: #211e5c;
+	border-radius: 20px;
+	background: #fff;
+	cursor: pointer;
+
+	font-weight: 800;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 0.5rem;
+	transition: all 0.4s ease-in-out;
+}
+
+#mode svg {
+	font-size: 1.3rem;
+}
+
+#notice {
+	position: fixed;
+	top: 10px;
+	left: 45wv;
+	padding: 0.3rem 0.5rem;
+	border: 2px solid #211e5c;
+	color: #211e5c;
+	background: none;
+
+	border-radius: 20px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 0.5rem;
+	transition: all 0.4s ease-in-out;
+}
+
+#add-outcome div {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	gap: 1rem;
+}
+
+#add-outcome input {
+	width: 100%;
+	padding: 0.5rem;
+	font-size: 1rem;
+	border-radius: 5px;
+
+	color: #211e5c;
+	border: 1px solid #6b61bb;
+}
+
+#add-outcome input:focus {
+	outline: none;
+	border: 2px solid #211e5c;
+	background: #a89be155;
+}
+
+#add-outcome button {
+	padding: 0.5rem 1rem;
+	font-size: 1rem;
+	font-weight: 700;
+	border-radius: 5px;
+
+	color: #211e5c;
+	border: 1px solid #6b61bb;
+	background: #a89be155;
+}
+
+#add-outcome button:focus,
+#add-outcome button:hover {
+	outline: none;
+	border: 1px solid #211e5c;
+	background: #a89be1;
+}
+
+#app.dark {
+	background: #211e5c;
+	transition: all 0.4s ease-in-out;
+}
+
+#app.dark #task {
+	color: #fff;
+}
+
+#app.dark #task h2 {
+	color: #fff;
+	transition: all 0.4s ease-in-out;
+}
+
+#app.dark #task h3 {
+	color: #f7e018;
+	transition: all 0.4s ease-in-out;
+}
+
+#app.dark #task ul li span {
+	background: #6b61bb;
+	transition: all 0.4s ease-in-out;
+}
+
+#app.dark #notice,
+#app.dark #mode {
+	border: 2px solid #fff;
+	color: #fff;
+	background: none;
+	transition: all 0.4s ease-in-out;
+}
+
+#app.dark #add-outcome input,
+#app.dark #task ul li .outcome input {
+	color: #fff;
+	border: 1px solid #fff;
+	background: #6b61bb;
+}
+
+#app.dark #add-outcome input::placeholder,
+#app.dark #task ul li .outcome input::placeholder {
+	color: #fff;
+}
+
+#app.dark #add-outcome input:focus,
+#app.dark #task ul li .outcome input:focus {
+	outline: none;
+	border: 2px solid #fff;
+	background: #a89be155;
+}
+
+#app.dark #add-outcome button,
+#app.dark .edit {
+	color: #21135c;
+	border: 1px solid #6b61bb;
+	background: #a89be1;
+}
+
+#app.dark #add-outcome button:focus,
+#app.dark #add-outcome button:hover,
+#app.dark .edit:focus,
+#app.dark .edit:hover {
+	outline: none;
+	border: 1px solid #211e5c;
+	background: #a89be155;
+	color: #fffa;
+}
+
+@media screen and (max-width: 768px) {
+	/* Mobile styles here */
+	main {
+		flex-direction: column;
+		gap: 1rem;
+		height: fit-content;
+	}
+
+	#profile {
+		width: 100%;
+	}
+
+	div.avatar {
+		width: 150px;
+		height: 150px;
+
+		margin: 1rem;
+		border-left: 6px solid #211e5c;
+		border-top: 6px solid #f7e018;
+		border-right: 6px solid #f7e018;
+		border-bottom: 6px solid #f7e018;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		order: -1;
+	}
+
+	.avatar > img {
+		width: 100%;
+		border-radius: 50%;
+		border: 2px solid #56423b;
+	}
+}
